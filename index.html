@@ -8,21 +8,86 @@
   
   <title>Frontend Mentor | QR code component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    * {
+    margin: 0;
+    padding: 0;
+    }
+    .background-slate-500 { background: #68778D;}
+    .background-slate-900 { background: #1F314F;}
+    .body { height: 100%; margin: 0; padding: 0;}
+    .background {
+      display: flex;
+      height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #D5E1EF;
+    }
+    .card { 
+      display: flex;
+      padding:  16px 16px 0px 16px;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      border-radius: 20px;
+      background: #FFFFFF;
+      box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.05);
+      width: 300px;
+      height: 499px;
+    }
+    .text {
+      display: flex;
+      padding: 0px 16px;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      align-self: stretch;
+    }
+    .text-preset-1 { 
+      align-self: stretch;
+      color: #1F314F;
+      text-align: center;
+      font-feature-settings: 'liga' off, 'clig' off;
+
+      /* text-preset-1 */
+      font-family: Outfit;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%;
+      margin: 0;
+    }
+    .text-preset-2 {
+      color: #68778D;
+      text-align: center;
+      font-feature-settings: 'liga' off, 'clig' off;
+
+      /* text-preset-2 */
+      font-family: Outfit;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      letter-spacing: 0.2px;
+      margin: 0;
+    }
+    .qr-code { 
+      width: 288px;
+      height: 288px;
+      border-radius: 10px;
+      background: #2C7DFA;
+    }
   </style>
+
 </head>
-<body>
-
-  Improve your front-end skills by building projects
-
-  Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+<body class="background">
+  <div class="card">
+    <div><img class="qr-code" src="images/image-qr-code.png" alt="QR code"></div>
+    <div class="text">
+      <h1 class="text-preset-1">Improve your front-end skills by building projects</h1>
+      <p class="text-preset-2">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
+    </div>
   </div>
 </body>
 </html>
